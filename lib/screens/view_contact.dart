@@ -54,6 +54,7 @@ class _ViewContactState extends State<ViewContact> {
     }
   }
 
+//delete Contact Method
   deleteContact(){
     showDialog(
       context: context,
@@ -81,6 +82,7 @@ class _ViewContactState extends State<ViewContact> {
       }
     );
   }
+
 
   navigateToEditScreen(id){
     Navigator.push(context, MaterialPageRoute(
