@@ -88,7 +88,7 @@ class _ViewContactState extends State<ViewContact> {
     Navigator.push(context, MaterialPageRoute(
       builder:(context){
         //Todo: Add Id
-        return EditContact();
+        return EditContact(id);
       } ));
   }
 
