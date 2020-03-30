@@ -35,6 +35,24 @@ class _ViewContactState extends State<ViewContact> {
     super.initState();
     this.getContact(id);
   }
+
+  callAction(String number) async{
+    String url = 'tel: $number';
+    if(await canLaunch(url)){
+      await launch(url);
+    }else{
+      throw 'Could not call $number';
+    }
+  }
+
+  smsAction(String number) async{
+    String url = 'sms:$number';
+    if(await canLaunch(url)){
+      await launch(url);
+    }else{
+      throw 'Could not send sms $number';
+    }
+  }
   
   @override
   Widget build(BuildContext context) {
